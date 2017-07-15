@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/LindsFisch/FriendFinder/issues"
   },
-  "homepage": "https://github.com/LindsFisch/FriendFinder#readme"
+  "homepage": "https://github.com/LindsFisch/FriendFinder#readme",
+  "dependencies": {
+    "materialize-css": "^0.99.0"
+  }
 }
