@@ -518,9 +518,15 @@
         name: $("#your_name").val().trim(),
         photo: $("#photo_url").val().trim(),
         scores: [$('input[name="group1"]:checked').val(), $('input[name="group2"]:checked').val(), $('input[name="group3"]:checked').val(), $('input[name="group4"]:checked').val(), $('input[name="group5"]:checked').val(), $('input[name="group6"]:checked').val(), $('input[name="group7"]:checked').val(), $('input[name="group8"]:checked').val(), $('input[name="group9"]:checked').val(), $('input[name="group10"]:checked').val()],
-      }
-      console.log(newFriend.scores);
+      };
       console.log(newFriend);
+
+      var currentURL = window.location.origin;
+      console.log(currentURL);
+
+      $.post(currentURL + "/api/friends", newFriend, function (data){
+
+      });
     })
   </script>
 
