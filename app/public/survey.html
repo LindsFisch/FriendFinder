@@ -8,7 +8,7 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"
     media="screen,projection" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
@@ -74,7 +74,7 @@
               <label for="q1a1">1</label>
 
 
-              <input name="group1" value= "2" type="radio" id="q1a2" />
+              <input name="group1" value="2" type="radio" id="q1a2" />
               <label for="q1a2">2</label>
 
 
@@ -194,12 +194,12 @@
               <label for="q4a1">1</label>
 
 
-              <input name="group4" value= "2" type="radio" id="q4a2" />
+              <input name="group4" value="2" type="radio" id="q4a2" />
               <label for="q4a2">2</label>
 
 
               <input name="group4" value="3" type="radio" id="q4a3" />
-              <label for="q4a4">3</label>
+              <label for="q4a3">3</label>
 
 
               <input name="group4" value="4" type="radio" id="q4a4" />
@@ -234,7 +234,7 @@
               <label for="q5a1">1</label>
 
 
-              <input name="group5"  value="2" type="radio" id="q5a2" />
+              <input name="group5" value="2" type="radio" id="q5a2" />
               <label for="q5a2">2</label>
 
 
@@ -498,7 +498,7 @@
       </div> -->
 
     </div>
-    
+
     <div class="container center-align">
       <div class="divider"></div>
       <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit<i class="material-icons right">send</i></button>
@@ -511,22 +511,34 @@
 
   </main>
   <footer></footer>
-  <script type = "text/javascript">
-    $("#submit").on("click", function(){
+  <script type="text/javascript">
+    $("#submit").on("click", function () {
 
       var newFriend = {
         name: $("#your_name").val().trim(),
         photo: $("#photo_url").val().trim(),
-        scores: [$('input[name="group1"]:checked').val(), $('input[name="group2"]:checked').val(), $('input[name="group3"]:checked').val(), $('input[name="group4"]:checked').val(), $('input[name="group5"]:checked').val(), $('input[name="group6"]:checked').val(), $('input[name="group7"]:checked').val(), $('input[name="group8"]:checked').val(), $('input[name="group9"]:checked').val(), $('input[name="group10"]:checked').val()],
+        scores: [
+          parseInt($('input[name="group1"]:checked').val()),
+          parseInt($('input[name="group2"]:checked').val()),
+          parseInt($('input[name="group3"]:checked').val()),
+          parseInt($('input[name="group4"]:checked').val()),
+          parseInt($('input[name="group5"]:checked').val()),
+          parseInt($('input[name="group6"]:checked').val()),
+          parseInt($('input[name="group7"]:checked').val()),
+          parseInt($('input[name="group8"]:checked').val()),
+          parseInt($('input[name="group9"]:checked').val()),
+          parseInt($('input[name="group10"]:checked').val())
+        ],
       };
       console.log(newFriend);
 
       var currentURL = window.location.origin;
-      console.log(currentURL);
 
-      $.post(currentURL + "/api/friends", newFriend, function (data){
+
+      $.post(currentURL + "/api/friends", newFriend, function (data) {
 
       });
+
     })
   </script>
 
