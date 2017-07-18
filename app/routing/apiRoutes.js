@@ -34,9 +34,12 @@ module.exports = function (app) {
                 smallestIndex = i;
             }
         }
-        console.log(scoreArray[smallestindex]);
+        console.log(scoreArray[smallestIndex]);
 
         var bestMatch = friendData[smallestIndex];
+
+        console.log(bestMatch);
+        res.json(bestMatch);
 
         //push new userData into friendData
         friendData.push(req.body);
