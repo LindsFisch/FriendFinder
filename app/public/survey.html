@@ -488,8 +488,6 @@
   <script type="text/javascript">
     $("#submit").on("click", function () {
 
-
-
       function validateform() {
         var valid = true;
         // $(".validate").each(function () {
@@ -498,10 +496,46 @@
         //     valid = false;
           
         // })
-
+        if (($("#your_name").val().trim()) === ""){
+          valid = false;
+        }
+        if (($("#your_name").val().trim()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group1"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group2"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group3"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group4"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group5"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group6"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group7"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group8"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group9"]:checked').val()) === ""){
+          valid = false;
+        }
+        if (($('input[name="group10"]:checked').val()) === ""){
+          valid = false;
+        }
         return valid;
         console.log(valid);
-      }
+      };
+
       validateform();
       if (validateform() === true) {
         var newFriend = {
