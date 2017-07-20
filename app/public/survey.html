@@ -472,14 +472,13 @@
       <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/LindsFisch/FriendFinder">GitHub Repo</a></p>
     </div>
   </footer>
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h4 id="bff"></h4>
-      <p>A bunch of text</p>
+      <h4>Your Match!</h4>
+      <h5 id="bff">Your Match!</h5>
+      <img id="bffImg" src="https://placekitten.com/200/300">
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -494,46 +493,45 @@
         //   if ($(this).val() == "") 
         //     console.log($(this).val());
         //     valid = false;
-          
+
         // })
-        if (($("#your_name").val().trim()) === ""){
+        if (($("#your_name").val().trim()) === "") {
           valid = false;
         }
-        if (($("#your_name").val().trim()) === ""){
+        if (($("#your_name").val().trim()) === "") {
           valid = false;
         }
-        if (($('input[name="group1"]:checked').val()) === ""){
+        if (($('input[name="group1"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group2"]:checked').val()) === ""){
+        if (($('input[name="group2"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group3"]:checked').val()) === ""){
+        if (($('input[name="group3"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group4"]:checked').val()) === ""){
+        if (($('input[name="group4"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group5"]:checked').val()) === ""){
+        if (($('input[name="group5"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group6"]:checked').val()) === ""){
+        if (($('input[name="group6"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group7"]:checked').val()) === ""){
+        if (($('input[name="group7"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group8"]:checked').val()) === ""){
+        if (($('input[name="group8"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group9"]:checked').val()) === ""){
+        if (($('input[name="group9"]:checked').val()) === "") {
           valid = false;
         }
-        if (($('input[name="group10"]:checked').val()) === ""){
+        if (($('input[name="group10"]:checked').val()) === "") {
           valid = false;
         }
         return valid;
-        console.log(valid);
       };
 
       validateform();
@@ -554,14 +552,23 @@
             parseInt($('input[name="group10"]:checked').val())
           ],
         };
-        console.log(newFriend);
 
         var currentURL = window.location.origin;
 
-
         $.post(currentURL + "/api/friends", newFriend, function (data) {
-          console.log(data.scores);
+          //populate the modal with the results
+          $("#bff").text(data.name);
+          $("#bffImg").attr("src", data.photo);
+          $('#modal1').modal('open');
         });
+        //clear the radio buttons after submit
+        $("input[type=radio]").each(function () {
+          $(this).prop('checked', false);
+        });
+        //clear about you section
+        $("#your_name").val("");
+        $("#photo_url").val("");
+
 
       } else {
         alert("Please fill out all fields before submitting!");

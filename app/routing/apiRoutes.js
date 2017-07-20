@@ -38,10 +38,10 @@ module.exports = function (app) {
 
         var bestMatch = friendData[smallestIndex];
 
-        res.json(bestMatch);
-
         //push new userData into friendData
         friendData.push(req.body);
+
+        res.json(bestMatch);
 
     });
 }

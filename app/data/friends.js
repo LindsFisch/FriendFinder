@@ -7,7 +7,7 @@ var friendArray = [
     {
         name: 'Buddy',
         photo: 'http://cdn3.meme.am/cache/images/folder979/600x600/14795979/happy-buddy-the-elf.jpg',
-        scores: ["2", "2", "4", "5", "2", "3", "4", "2", "1", "2"]
+        scores: ["2", "2", "4", "1", "2", "3", "4", "2", "1", "2"]
     },
         {
         name: 'Brennan Huff',
@@ -17,17 +17,17 @@ var friendArray = [
         {
         name: 'Chazz Reinhold',
         photo: 'http://www.fusionmedstaff.com/wp-content/uploads/2015/01/Ma-the-meatloaf.jpg',
-        scores: ["1", "5", "4", "3", "2", "5", "1", "5", "3", "1"]
+        scores: ["1", "5", "1", "3", "2", "5", "1", "5", "3", "1"]
     },
         {
         name: 'Allen Gamble',
         photo: 'https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-the-other-guys-will-ferrell.jpg',
-        scores: ["3", "1", "3", "2", "5", "2", "3", "4", "4", "3"]
+        scores: ["3", "1", "3", "2", "5", "2", "3", "4", "3", "3"]
     },
     {
         name: 'Ricky Bobby',
         photo: 'https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-talladega-nights-the-ballad-of-ricky-bobby-will-ferrell.jpg',
-        scores: ["5", "3", "3", "2", "4", "3", "5", "4", "3", "2"]
+        scores: ["5", "3", "1", "2", "4", "3", "5", "4", "1", "2"]
     },
 ];
 
