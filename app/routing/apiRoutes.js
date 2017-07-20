@@ -25,7 +25,6 @@ module.exports = function (app) {
             //push difference into array
             scoreArray.push(scoreDifference);
         }
-        console.log(scoreArray);
         var smallestIndex = 0;
 
         //iterate through the scoreArray to find the index of the smallest integer
@@ -34,7 +33,6 @@ module.exports = function (app) {
                 smallestIndex = i;
             }
         }
-        console.log(scoreArray[smallestIndex]);
 
         var bestMatch = friendData[smallestIndex];
 
