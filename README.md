@@ -24,4 +24,4 @@ Created a full-stack "compatibility-based" app that will take in results from us
 ### Technologies Utilized
 Nodejs  Expressjs  
 
-(App here)[https://find-friend-lf.herokuapp.com/]
+https://find-friend-lf.herokuapp.com/
